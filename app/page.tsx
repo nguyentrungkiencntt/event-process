@@ -159,7 +159,7 @@ const timeline = [
   { time: "08:00", title: "Đón khách & Check-in", desc: "Nhận vé, quà tặng và chụp ảnh lưu niệm" },
   { time: "09:00", title: "Khai mạc & Giới thiệu sự kiện", desc: "Tổng quan chương trình, phát biểu từ ban tổ chức" },
   { time: "10:00", title: "Talkshow: Xu hướng AI 2026", desc: "Khám phá cách AI đang thay đổi thế giới lập trình" },
-  { time: "13:30", title: "Workshop Frontend hiện đại", desc: "Trải nghiệm Next.js 15 và công nghệ web mới" },
+  { time: "13:30", title: "Workshop Frontend hiện đại", desc: "Trải nghiệm Next.js và công nghệ web mới" },
   { time: "15:30", title: "Networking & Bế mạc", desc: "Kết nối, tuyển dụng, và chia sẻ cuối sự kiện" },
 ];
 
