@@ -47,7 +47,7 @@ export default function EventDetailPage() {
             initial={{ x: 40, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            src="/images/gioithieu.jpg"
+            src="/images/gioithieu1.jpg"
             alt="Sân khấu sự kiện"
             className="rounded-2xl shadow-lg border border-white/10"
           />
