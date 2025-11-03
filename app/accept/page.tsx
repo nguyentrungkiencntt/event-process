@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 
 export default function ConfirmPage() {
   const attendee = {
-    name: "Nguyễn Văn A",
+    name: "Nguyễn Trung Kiên",
     email: "nkien9450@gmail.com",
     ticketId: "TS2026-8472",
   };
