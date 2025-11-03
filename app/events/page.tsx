@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import Feature from "@/app/components/Feature";
 import Button from "@/app/components/Button";
+import { redirect } from "next/navigation";
 
 type FormData = {
   name: string;
@@ -28,9 +29,11 @@ export default function EventLandingPage() {
     try {
 
       await new Promise((r) => setTimeout(r, 900));
-
       setSuccess(data);
       reset();
+      setTimeout(() => {
+        redirect("/accept")
+      }, 2000)
     } catch (err) {
       console.error(err);
       alert("Đăng ký thất bại. Vui lòng thử lại");
