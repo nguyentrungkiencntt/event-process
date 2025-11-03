@@ -15,7 +15,7 @@ export default function ConfirmPage() {
   const event = {
     title: "Tech Spark 2026",
     date: "12 Tháng 3, 2026 — 09:00",
-    location: "Hội trường A, Hà Nội",
+    location: "Hội trường số 4, Đà Nẵng",
   };
 
   const router = useRouter();
@@ -28,7 +28,7 @@ export default function ConfirmPage() {
         transition={{ duration: 0.8 }}
         className="max-w-md w-full bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-8 text-center relative overflow-hidden"
       >
-    
+
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -42,11 +42,11 @@ export default function ConfirmPage() {
           Đăng ký thành công!
         </h1>
         <p className="text-white/70 text-sm mb-6">
-          Xin chúc mừng <span className="text-white font-semibold">{attendee.name}</span>!  
+          Xin chúc mừng <span className="text-white font-semibold">{attendee.name}</span>!
           Thông tin vé của bạn đã được gửi tới <span className="font-medium">{attendee.email}</span>.
         </p>
 
-     
+
         <div className="bg-black/30 border border-white/10 rounded-xl p-4 text-left space-y-2">
           <div className="flex items-center gap-3">
             <Ticket className="text-pink-400" size={20} />
@@ -81,7 +81,7 @@ export default function ConfirmPage() {
           </div>
         </div>
 
-     
+
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -103,7 +103,7 @@ export default function ConfirmPage() {
         </motion.div>
 
         <div
-        onClick={()=>router.push("/")}
+          onClick={() => router.push("/")}
           className="inline-block mt-8 px-6 hover:cursor-pointer py-3 rounded-lg bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-semibold shadow-md"
         >
           Quay lại trang chủ
