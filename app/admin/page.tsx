@@ -15,15 +15,20 @@ import {
   Cell,
 } from "recharts";
 import { Users, CheckCircle, XCircle, Loader2 } from "lucide-react";
+import { redirect } from "next/navigation";
+import { useEffect } from "react";
 
 export default function DashboardPage() {
-  // Giả lập dữ liệu
   const stats = {
     total: 150,
     confirmed: 90,
     pending: 45,
     rejected: 15,
   };
+
+  useEffect(()=>{
+     redirect("/admin/confirm")
+  },[])
 
   const COLORS = ["#22c55e", "#eab308", "#ef4444"];
 
