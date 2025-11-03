@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 import { CheckCircle, CalendarDays, MapPin, QrCode, Ticket } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function ConfirmPage() {
-  // Giả lập dữ liệu (nếu thực tế, bạn có thể truyền qua query hoặc lấy từ API)
   const attendee = {
     name: "Nguyễn Văn A",
-    email: "vana@example.com",
+    email: "nkien9450@gmail.com",
     ticketId: "TS2026-8472",
   };
 
@@ -18,16 +18,17 @@ export default function ConfirmPage() {
     location: "Hội trường A, Hà Nội",
   };
 
+  const router = useRouter();
+
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-linear-to-b from-[#090b1a] via-[#10142a] to-[#1a1e3c] text-white px-6 py-16">
-      {/* CONFIRMATION CARD */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="max-w-md w-full bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-8 text-center relative overflow-hidden"
       >
-        {/* Icon */}
+    
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -45,7 +46,7 @@ export default function ConfirmPage() {
           Thông tin vé của bạn đã được gửi tới <span className="font-medium">{attendee.email}</span>.
         </p>
 
-        {/* Event Info */}
+     
         <div className="bg-black/30 border border-white/10 rounded-xl p-4 text-left space-y-2">
           <div className="flex items-center gap-3">
             <Ticket className="text-pink-400" size={20} />
@@ -80,7 +81,7 @@ export default function ConfirmPage() {
           </div>
         </div>
 
-        {/* QR Placeholder */}
+     
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -101,34 +102,14 @@ export default function ConfirmPage() {
           </p>
         </motion.div>
 
-        {/* Button */}
-        <motion.div
-          whileHover={{ scale: 1.05 }}
+        <div
+        onClick={()=>router.push("/")}
           className="inline-block mt-8 px-6 hover:cursor-pointer py-3 rounded-lg bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-semibold shadow-md"
         >
           Quay lại trang chủ
-        </motion.div>
+        </div>
 
-        {/* Floating Lights */}
-        <BackgroundFX />
       </motion.div>
     </main>
-  );
-}
-
-function BackgroundFX() {
-  return (
-    <>
-      <motion.div
-        className="absolute -top-20 -left-40 w-80 h-80 bg-purple-500/30 rounded-full blur-3xl"
-        animate={{ y: [0, 30, 0], opacity: [0.4, 0.7, 0.4] }}
-        transition={{ repeat: Infinity, duration: 8 }}
-      />
-      <motion.div
-        className="absolute bottom-[-60px] -right-20 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl"
-        animate={{ y: [0, -30, 0], opacity: [0.5, 0.8, 0.5] }}
-        transition={{ repeat: Infinity, duration: 10 }}
-      />
-    </>
   );
 }

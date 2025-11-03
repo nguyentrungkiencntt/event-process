@@ -12,11 +12,11 @@ interface Attendee {
 }
 
 const attendeesData: Attendee[] = [
-    { id: 1, name: "Nguyễn Văn A", email: "vana@example.com", status: "confirmed" },
-    { id: 2, name: "Trần Thị B", email: "thib@example.com", status: "pending" },
-    { id: 3, name: "Phạm Đức C", email: "ducc@example.com", status: "confirmed" },
-    { id: 4, name: "Lê Hồng D", email: "hongd@example.com", status: "confirmed" },
-    { id: 5, name: "Hoàng Minh E", email: "minhe@example.com", status: "pending" },
+    { id: 1, name: "Nguyễn Văn A", email: "vana@gmail.com", status: "confirmed" },
+    { id: 2, name: "Trần Thị B", email: "thib@gmail.com", status: "pending" },
+    { id: 3, name: "Phạm Đức C", email: "ducc@gmail.com", status: "confirmed" },
+    { id: 4, name: "Lê Hồng D", email: "hongd@gmail.com", status: "confirmed" },
+    { id: 5, name: "Hoàng Minh E", email: "minhe@gmail.com", status: "pending" },
 ];
 
 export default function AttendeeListPage() {
